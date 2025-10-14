@@ -8,6 +8,10 @@
     "dev": "node --watch server.js",
     "seed": "node src/config/seed.js"
   },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "compression": "^1.8.1",
     "cors": "^2.8.5",

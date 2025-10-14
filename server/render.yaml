@@ -1,11 +1,20 @@
-services:
+﻿services:
   - type: web
     name: styleforge-api
     env: node
+    region: oregon
+    plan: free
     buildCommand: npm install
     startCommand: npm start
+    healthCheckPath: /health
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: API_VERSION
+        value: 2.0.0
